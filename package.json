@@ -1,0 +1,23 @@
+{
+  "name": "epta-digital-web",
+  "version": "1.0.0",
+  "description": "Epta digital website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Epta-Digital/epta-digital.git"
+  },
+  "author": "epta digital",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Epta-Digital/epta-digital/issues"
+  },
+  "homepage": "https://github.com/Epta-Digital/epta-digital#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
