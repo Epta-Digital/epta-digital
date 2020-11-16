@@ -20,6 +20,30 @@ body {
     font-weight: bold;
 }
 
+/*navbar*/
+.navbar{
+    background-image: url('../images/Rectangle\ 4.png');
+    padding: auto 5%;
+}
+.navbar-brand{
+    margin-right: 10rem;
+}
+.navbar img{
+    size: 80%;
+}
+.nav-item{
+    font-weight: bold;
+    margin-right: 3rem;
+}
+.nav-link{
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+.navbar li{
+    color: white;
+}
+
 /*introductory section*/
 #intro{
     background-image: url('../images/Rectangle\ 4.png');
@@ -36,19 +60,118 @@ body {
 
 /*info area*/
 #info{
-    padding: 5% 10%;
+    padding: 7% 10%;
     text-align: center;
 }
 .info-p{
     line-height: 3em;
     text-align: left;
 }
+.info-p a{
+    outline: none;
+    text-decoration: none;
+    color: #A40404;
+}
+
 
 /*services area*/
 #services{
-    padding: 5% 10%;
+    padding: 2% 10% 5%;
 }
 .services-h1{
     text-align: center;
     margin-bottom: 30px;
+}
+#services .card-body{
+    text-align: center;
+    height: 19rem;
+    padding: 3rem 2rem;
+}
+.card:hover{
+    background-color: #A40404;
+    color: white;
+    
+}
+.card:hover .card-title{
+    color: white;
+}
+#services .card-title{
+    font-weight: bold;
+}
+#services .card-text{
+    font-weight: lighter;
+    opacity: 90%;
+}
+.more-services{
+    background: radial-gradient(122.68% 218.37% at 15.36% 21.34%, #53BBF5 0%, rgba(45, 156, 219, 0) 100%);
+}
+
+
+/*academy area*/
+#academy{
+    padding: 5% 10%;
+    text-align: left;
+}
+
+.academy-h5{
+    font-size: 3.5rem;
+    padding-top: 3rem;
+}
+
+
+/* blog area */
+#blog{
+    padding: 5% 10%;
+}
+.blog-h1{
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.blog-h5{
+    font-weight: bold;
+}
+.blog-btn{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* footer */
+.page-footer{
+    padding: 2% 10%;
+    background-color: black;
+    color: white;
+}
+.page-footer a{
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+.social-media{
+    list-style-type: none;
+}
+.social-media li{
+    display: inline;
+    padding-right: 1.5em;
+}
+
+/*responsiveness*/
+@media (max-width: 450px){
+    .navbar-brand{
+        margin-right: auto;
+    }
+    .intro-h1{
+        font-size: 2rem;
+    }
+    .info-p{
+        line-height: 2em;
+    }
+    #services .card-body{
+        height: 21rem;
+    }
+    .academy-h5{
+        font-size: 2rem;
+    }.page-footer{
+        padding: 2% 5%;
+    }
+
 }
