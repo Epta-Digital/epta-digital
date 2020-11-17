@@ -19,6 +19,9 @@ body {
 .bold{
     font-weight: bold;
 }
+.white{
+    color: white;
+}
 
 /*navbar*/
 .navbar{
@@ -148,14 +151,37 @@ body {
 }
 .social-media{
     list-style-type: none;
+    margin-top: 1rem;
 }
 .social-media li{
     display: inline;
     padding-right: 1.5em;
 }
+.footer-elements{
+    padding-top: 3rem;
+}
+.extras li{
+    padding: 0.2rem;
+}
+
+
+/*about page*/
+#about-epta{
+    padding: 7% 15%;
+}
+.about-div{
+    text-align: center;
+}
+
 
 /*responsiveness*/
-@media (max-width: 450px){
+@media (max-width: 470px){
+    #about-epta{
+        padding-top: 23%;
+    }
+    #intro{
+        padding-top: 23%;
+    }
     .navbar-brand{
         margin-right: auto;
     }
@@ -164,6 +190,9 @@ body {
     }
     .info-p{
         line-height: 2em;
+    }
+    .academy-img{
+        width: 100%;
     }
     #services .card-body{
         height: 21rem;
@@ -174,4 +203,60 @@ body {
         padding: 2% 5%;
     }
 
+}
+@media (min-width: 474px) and (max-width: 525px){
+    #about-epta{
+        padding-top: 23%;
+    }
+    #intro{
+        padding-top: 23%;
+    }
+    .intro-h1{
+        font-size: 2rem;
+    }
+    .academy-img{
+        width: 100%;
+    }
+}
+@media (min-width: 526px) and (max-width: 559px){
+    #about-epta{
+        padding-top: 23%;
+    }
+    #intro{
+        padding-top: 23%;
+    }
+    .intro-h1{
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 560px) and (max-width: 700px){
+    #about-epta{
+        padding-top: 23%;
+    }
+    #intro{
+        padding-top: 23%;
+    }
+    .intro-h1{
+        font-size: 2.8rem;
+    }
+}
+@media (min-width: 701px) and (max-width: 988px){
+    #about-epta{
+        padding-top: 23%;
+    }
+}
+
+@media (min-width: 989px) and (max-width: 1170px){
+    #about-epta{
+        padding-top: 23%;
+    }
+    .nav-item{
+        margin-right: 1rem;
+    }
+    #academy p{
+        font-size: 0.9rem;
+    }
+    #services .card-body{
+        height: 24rem;
+    }
 }
