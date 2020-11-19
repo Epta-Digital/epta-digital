@@ -10,3 +10,4 @@ app.listen(PORT, () => {
    console.log(`App running on port ${PORT}`);
 })
 
+document.getElementById('project-brief').style.height="200px";

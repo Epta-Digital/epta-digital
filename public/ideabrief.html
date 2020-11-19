@@ -60,11 +60,54 @@
       <section id="ideabrief">
           <h1>Tell us about your idea, whatever the stage of development.</h1>
           <p>You will get a call from us within an hour of filling the form</p>
+          <form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Company name </label><br>
+              <input type="text" name="name" class="rounded-input" placeholder="e.g. ABC Limited" id="name" required>
+            </div>
+            <div class="form-example">
+              <label for="email">Email address </label><br>
+              <input type="email" name="email" class="rounded-input" placeholder="e.g. abclimited@gmail.com" id="email" required>
+            </div>
+            <div class="form-example">
+              <label for="mobile-no">Mobile number</label><br>
+              <input type="tel" name="mobile number" class="rounded-input" placeholder="e.g. +2348059032456" id="mobile-no" required>
+            </div>
+            <div class="form-example">
+              <label for="services">Select service(s) </label><br>
+              <select name="services" class="rounded-input">
+                <option value="design">Graphics design</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="photography">Photography/Videography</option>
+                <option value="content-writing">Copywriting/content writing</option>
+                <option value="web-dev">Web Development</option>
+                <option value="animations">Animations</option>
+                <option value="brand-strategy">Brand strategy/Consultancy</option>
+              </select>
+            </div>
+            <div style="float:left;">
+              <label for="username">Budget</label> <br>
+              <input id="user_first_name" class="rounded-input users-budget" name="user[first_name]" size="50" type="number" />
+            </div>
+            
+            <div style="float:left;">
+              <label for="name">Expected Date of Delivery</label> <br>
+              <input id="user_last_name" class="rounded-input users-budget" name="user[last_name]" size="50" type="date" required/>
+            </div>
+            <div style="clear:both;">&nbsp;</div>
+            <div class="form-example">
+              <label for="project-brief">Project brief: </label><br>
+              <input type="text" class="rounded-input" name="project" id="project-brief" required>
+            </div>
+            <div class="form-example">
+              <label for="file">Attach file (optional)</label><br>
+              <input type="file" class="rounded-input" name="project" id="file" required>
+            </div>
+            <button class="btn btn-danger rounded-input btn-block" type="submit">Send</button>
+          </form> 
       </section>
 
-      <form>
-
-      </form>
+      
 
 
       <section id="footer-area">

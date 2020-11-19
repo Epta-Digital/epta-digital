@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    box-sizing: border-box;
 }
 
 .title {
@@ -211,6 +212,31 @@ hr{
     margin: 5%;
     padding: 7% 15%;
 }
+.rounded-input {
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+input{
+    width: 70%;
+    margin-bottom: 1rem;
+}
+input .users-budget{
+    width: 100%;
+}
+select{
+    width: 70%;
+    margin-bottom: 1rem;
+}
+#ideabrief button{
+    width: 70%;
+    background-color: #A40404;
+}
+#ideabrief button:hover{
+    opacity: 90%;
+}
+
+
 
 /*responsiveness*/
 @media (max-width: 473px){
@@ -243,6 +269,15 @@ hr{
     }.page-footer{
         padding: 2% 5%;
     }
+    input{
+        width: 100%;
+    }
+    select{
+        width: 100%;
+    }
+    #ideabrief button{
+        width: 100%;
+    }
 
 }
 @media (min-width: 474px) and (max-width: 525px){
@@ -261,6 +296,15 @@ hr{
     .academy-img{
         width: 100%;
     }
+    input{
+        width: 100%;
+    }
+    select{
+        width: 100%;
+    }
+    #ideabrief button{
+        width: 100%;
+    }
 }
 @media (min-width: 526px) and (max-width: 559px){
     #about-epta{
@@ -274,6 +318,15 @@ hr{
     }
     .intro-h1{
         font-size: 2.5rem;
+    }
+    input{
+        width: 100%;
+    }
+    select{
+        width: 100%;
+    }
+    #ideabrief button{
+        width: 100%;
     }
 }
 @media (min-width: 560px) and (max-width: 700px){
@@ -289,10 +342,28 @@ hr{
     .intro-h1{
         font-size: 2.8rem;
     }
+    input{
+        width: 100%;
+    }
+    select{
+        width: 100%;
+    }
+    #ideabrief button{
+        width: 100%;
+    }
 }
 @media (min-width: 701px) and (max-width: 988px){
     #about-epta{
         padding-top: 23%;
+    }
+    input{
+        width: 100%;
+    }
+    select{
+        width: 100%;
+    }
+    #ideabrief button{
+        width: 100%;
     }
 }
 
