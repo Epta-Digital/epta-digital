@@ -56,34 +56,58 @@
         </div>
         <!-- Collapsible content -->
       </nav>
-      <!--/.Navbar-->
-      <section id="intro-2">
-        <h1 class="intro-h1 bold">YOUR ONE-STOP AGENCY FOR <br>PREMIUM DIGITAL SERVICES</h1>
-        <p>In record time, we help transition your personal idea into viable products and brands.</p>
-        <button type="button" class="btn btn-outline-light">Our Portfolio</button>
-    </section>
 
-      <section id="about-epta">
-        <h1 class="services-h1 bold"><span class="dark">OUR</span> <span class="red">STORY</span></h1>
-        <p>
-            We at Epta Digital are a team of Gen Zed creatives that infuses creativity, innovation & entrepreneurship with hard work, dedication & professionalism to drive home our goal of providing the best digital services you need to increase sales and revenue in record time.
-            We exist to deliver the best services saving you time searching for different individual techies or tech savvies to help build your brand, design (- graphics, website, desktop or mobile application), write selling copies or persuasive contents, manage or optimize your social media business accounts for more sales amongst other services we provide. Epta Digital is a one-stop platform to meet all of your digital needs.
-            We deliver services to 3 distinct groups:<br>
-            <ol>
-                <li>People with personal ideas, we can help you bring your personal idea to light and turn it into a viable product.</li>
-                <li>People with already existing brands and products, we provide individual services for optimization of your brand or product.</li>
-                <li>People who want to learn from our virtual or physical classes through our Academy.</li>
-            </ol>
-            To reach out to us, fill this form here or contact us directly through any of our social media handles, our DMs are open or place a call directly to our customer service line. 
-        </p>
-        <div class="about-div"></div>
-            <button type="button" class="btn btn-outline-danger team-button">Meet the team <i class="fas fa-arrow-right fa-1.5x"></i></button>
-          </div>
-        
+      <section id="ideabrief">
+          <h1>Tell us about your idea, whatever the stage of development.</h1>
+          <p>You will get a call from us within an hour of filling the form</p>
+          <form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Company name </label><br>
+              <input type="text" name="name" class="rounded-input" placeholder="e.g. ABC Limited" id="name" required>
+            </div>
+            <div class="form-example">
+              <label for="email">Email address </label><br>
+              <input type="email" name="email" class="rounded-input" placeholder="e.g. abclimited@gmail.com" id="email" required>
+            </div>
+            <div class="form-example">
+              <label for="mobile-no">Mobile number</label><br>
+              <input type="tel" name="mobile number" class="rounded-input" placeholder="e.g. +2348059032456" id="mobile-no" required>
+            </div>
+            <div class="form-example">
+              <label for="services">Select service(s) </label><br>
+              <select name="services" class="rounded-input">
+                <option value="design">Graphics design</option>
+                <option value="UI/UX">UI/UX</option>
+                <option value="photography">Photography/Videography</option>
+                <option value="content-writing">Copywriting/content writing</option>
+                <option value="web-dev">Web Development</option>
+                <option value="animations">Animations</option>
+                <option value="brand-strategy">Brand strategy/Consultancy</option>
+              </select>
+            </div>
+            <div style="float:left;">
+              <label for="username">Budget</label> <br>
+              <input id="user_first_name" class="rounded-input users-budget" name="user[first_name]" size="50" type="number" />
+            </div>
+            
+            <div style="float:left;">
+              <label for="name">Expected Date of Delivery</label> <br>
+              <input id="user_last_name" class="rounded-input users-budget" name="user[last_name]" size="50" type="date" required/>
+            </div>
+            <div style="clear:both;">&nbsp;</div>
+            <div class="form-example">
+              <label for="project-brief">Project brief: </label><br>
+              <input type="text" class="rounded-input" name="project" id="project-brief" required>
+            </div>
+            <div class="form-example">
+              <label for="file">Attach file (optional)</label><br>
+              <input type="file" class="rounded-input" name="project" id="file" required>
+            </div>
+            <button class="btn btn-danger rounded-input btn-block" type="submit">Send</button>
+          </form> 
       </section>
- 
 
-
+      
 
 
       <section id="footer-area">
