@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- favicons --> 
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
@@ -12,222 +12,223 @@
 
     <!--bootstrap cdn-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="./stylesheets/main.css">
-
     <!--font awesome cdn-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
- 
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    
     <title>Epta Digital</title>
 </head>
 
 <body>
-  <main>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg transparent navbar-dark danger-color fixed-top" id="navbar">
-      <!-- Navbar brand -->
-      <img class="navbar-brand" src="images/svgg2.png" alt="epta digital logo">
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="basicExampleNav">
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link white" href="index.html">Home
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link  white" href="#services">Services</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link white" href="#academy">Academy</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link white" href="#blog">Blog</a>
-          </li> 
-        </ul>  
-        <!-- Links -->
-        <button type="button" class="btn btn-outline-light">Get started</button>
-      </div>
-      <!-- Collapsible content -->
-    </nav>
-    <!--/.Navbar-->
-
-    <section id="intro">
-        <h1 class="intro-h1 bold">YOUR ONE-STOP AGENCY FOR <br>PREMIUM DIGITAL SERVICES</h1>
-        <p>In record time, we help transition your personal idea into viable products and brands.</p>
-        <button type="button" class="btn btn-outline-light">Our Portfolio</button>
-    </section>
-
-    <section id="info">
-        <div class="row">
-            <div class="col-lg-4 col-sm-12">
-                <img src="images/path0.png" alt="epta logo">
-                <h2 class="bold"><strong class="dark">EPTA</strong> <span class="red">DIGITAL</span></h2>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-                <p class="info-p">We at Epta Digital are a team of Gen Zed creatives that infuses creativity, innovation & entrepreneurship
-                    with hard work, dedication and professionalism to drive home our goal of providing the best digital services 
-                    you need to increase sales and revenue in record time. <a href="">Learn more...</a>
-                </p>
-            </div>
+  <div class="main-body">
+    <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg transparent navbar-dark danger-color fixed-top" id="navbar">
+        <!-- Navbar brand -->
+        <a href="#"><img class="navbar-brand" src="images/logo.svg" alt="epta digital logo"></a>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#academy">Academy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li> 
+          </ul>  
+          <!-- Links -->
+          <button type="button" class="btn btn-outline-light" onclick="location.href = 'ideabrief.html'">Get started</button>
         </div>
-    </section>
-
-    <section id="services">
-        <h1 class="services-h1 bold"><span class="dark">OUR</span> <span class="red">SERVICES</span></h1>
-        <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="card mb-4">
-                <div class="card-body">
-                  <h5 class="card-title red">GRAPHICS DESIGN</h5>
-                  <p class="card-text">Build a successful brand with quality representation using strong and memorable designs,
-                      and branding that help thin out competition, and put your business at the forefront.
+        <!-- Collapsible content -->
+      </nav>
+    </header>
+  
+    <main>
+      <section class="intro">
+          <h1>YOUR ONE-STOP AGENCY FOR <br>PREMIUM DIGITAL SERVICES</h1>
+          <p>In record time, we help transition your personal idea into viable products and brands.</p>
+          <!-- <button type="button" class="btn btn-outline-light">Our Portfolio</button> -->
+      </section>
+  
+      <section class="info">
+          <div class="row">
+              <div class="col-lg-4">
+                  <img src="images/emblem.svg" alt="epta digital emblem">
+                  <h2 class="font-weight-bold"><strong class="dark">EPTA</strong> <span class="red">DIGITAL</span></h2>
+              </div>
+              <div class="col-lg-8">
+                  <p>We at Epta Digital are a team of Gen Zed creatives that infuses creativity, innovation & entrepreneurship
+                      with hard work, dedication and professionalism to drive home our goal of providing the best digital services 
+                      you need to increase sales and revenue in record time. <a href="about.html">Learn more...</a>
                   </p>
-                  <button type="button" class="btn btn-outline-danger">Get started</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-              <div class="card mb-4">
-                <div class="card-body">
-                  <h5 class="card-title red">UI/UX DESIGN</h5>
-                  <p class="card-text">Increase engagement and sales for your business through beautiful and intuitive mobile and
-                      web interfaces. Our apps and websites are designed to think for the users.
-                  </p>
-                  <button type="button" class="btn btn-outline-danger">Get started</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title red">WEB DESIGN & DEVELOPMENT</h5>
-                    <p class="card-text">Expand the reach of your business with the world's largest market - the web. From 
-                        conceptualization to deployment, we take you along the journey with us.
-                    </p>
-                    <button type="button" class="btn btn-outline-danger">Get started</button>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title red">COPYWRITING & CONTENT DEVELOPMENT</h5>
-                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A facilis neque, eveniet facere laborum perspiciatis ipsam labore pariatur corporis temporibus ut placeat itaque.
-                    </p>
-                    <button type="button" class="btn btn-outline-danger">Get started</button>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title red">PHOTOGRAPHY & VIDEOGRAPHY</h5>
-                    <p class="card-text">Taking a photograph, freezing a moment reveals how rich reality truly is. We have a team of professionals who 
-                        would deliver the best of high quality services. You do your thing, we capture the magic.
-                    </p>
-                    <button type="button" class="btn btn-outline-danger">Get started</button>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title red">BRAND STRATEGY & CONSULTANCY</h5>
-                    <p class="card-text">Position and develop your brand to be unique, and drive growth using frameworks. Research and internal processes
-                        that are flexible, makes it possible to test for results, and adapt swiftly.
-                    </p>
-                    <button type="button" class="btn btn-outline-danger">Get started</button>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title red">ANIMATIONS</h5>
-                    <p class="card-text">Promote your business on all channels with animations to provide a unique touch ranging from introduction videos, 
-                        explained animations, promotional videos and white board animations.
-                    </p>
-                    <button type="button" class="btn btn-outline-danger">Get started</button>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="card mb-4">
-                <div class="card-body more-services">
-                  <h5 class="card-title">NEED MORE THAN ONE <br> OF OUR SERVICES?</h5>
-                  <p class="card-text">Let us help you do more with less.</p>
-                  <button type="button" class="btn btn-outline-danger">SELECT BRAND PACKAGE</button>
-                </div>
               </div>
           </div>
-          </div> 
-    </section>
-
-    <section id="academy">
-      <div class="row">
-          <div class="col-lg-6 col-sm-12">
-              <h5 class="academy-h5"><span class="dark bold">LEARN MASTERY <br> AT</span> <span class="red bold">EPTA ACADEMY,</span></h5>
-              <p>21st century high demand skills at your finger tips. Learn and be <br>certified in skills of digital relevance.</p>
-              <button type="button" class="btn btn-outline-danger">Enroll courses</button>
+      </section>
+  
+      <section id="services">
+          <h1 class="font-weight-bold"><span class="dark">OUR</span> <span class="red">SERVICES</span></h1>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center">
+              <div class="col mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">GRAPHICS DESIGN</h5>
+                    <p class="card-text">Build a successful brand with quality representation using strong and memorable designs,
+                        and branding that help thin out competition, and put your business at the forefront.
+                    </p>
+                  </div>
+                  <div class="card-footer" role="button">Get Started</div>
+                </div>
+              </div>
+              <div class="col mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">UI/UX DESIGN</h5>
+                    <p class="card-text">Increase engagement and sales for your business through beautiful and intuitive mobile and
+                        web interfaces. Our apps and websites are designed to think for the users.
+                    </p>
+                  </div>
+                  <div class="card-footer" role="button">Get Started</div>
+                </div>
+              </div>
+              <div class="col mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">WEB DESIGN & DEVELOPMENT</h5>
+                      <p class="card-text">Expand the reach of your business with the world's largest market - the web. From 
+                          conceptualization to deployment, we take you along the journey with us.
+                      </p>
+                    </div>
+                    <div class="card-footer" role="button">Get Started</div>
+                  </div>
+              </div>
+              <div class="col mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">COPYWRITING & CONTENT DEVELOPMENT</h5>
+                      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A facilis neque, eveniet facere laborum perspiciatis ipsam labore pariatur corporis temporibus ut placeat itaque.
+                      </p>
+                    </div>
+                    <div class="card-footer" role="button">Get Started</div>
+                  </div>
+              </div>
+              <div class="col mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">PHOTOGRAPHY & VIDEOGRAPHY</h5>
+                      <p class="card-text">Taking a photograph, freezing a moment reveals how rich reality truly is. We have a team of professionals who 
+                          would deliver the best of high quality services. You do your thing, we capture the magic.
+                      </p>
+                    </div>
+                    <div class="card-footer" role="button">Get Started</div>
+                  </div>
+              </div>
+              <div class="col mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">BRAND STRATEGY & CONSULTANCY</h5>
+                      <p class="card-text">Position and develop your brand to be unique, and drive growth using frameworks. Research and internal processes
+                          that are flexible, makes it possible to test for results, and adapt swiftly.
+                      </p>
+                    </div>
+                    <div class="card-footer" role="button">Get Started</div>
+                  </div>
+              </div>
+              <div class="col mb-4">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">ANIMATIONS</h5>
+                      <p class="card-text">Promote your business on all channels with animations to provide a unique touch ranging from introduction videos, 
+                          explained animations, promotional videos and white board animations.
+                      </p>
+                    </div>
+                    <div class="card-footer" role="button">Get Started</div>
+                  </div>
+              </div>
+              <div class="col-lg-8 mb-4">
+                <div class="card h-100">
+                  <div class="card-body more-services">
+                    <h5 class="card-title">NEED MORE THAN ONE <br> OF OUR SERVICES?</h5>
+                    <p class="card-text">Let us help you do more with less.</p>
+                    <button type="button" class="btn btn-outline-danger">SELECT BRAND PACKAGE</button>
+                  </div>
+                </div>
+            </div>
+            </div> 
+      </section>
+  
+      <section id="academy">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1><span class="dark font-weight-bold">LEARN MASTERY <br> AT</span> <span class="red font-weight-bold">EPTA ACADEMY,</span></h1>
+                <p>21st century high demand skills at your finger tips. Learn and be <br>certified in skills of digital relevance.</p>
+                <button type="button" class="btn btn-outline-danger">Enroll courses</button>
+            </div>
+            <div class="col-lg-6">
+                <img class="academy-img" src="images/academy.png" alt="">
+            </div>
+        </div>
+      </section>
+  
+      <section id="blog">
+        <h1 class="font-weight-bold"><span class="dark">THE</span> <span class="red">BLOG</span></h1>
+        <div class="card-deck">
+          <div class="card">
+            <img src="images/blog_img.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title font-weight-bold">Why we need to start talking about the digital skills gap</h2>
+              <p class="card-text">Social media knowledge is a job skill that's no longer a "nice-to-have", but a "must-have",
+                for everyone, from marketers to sales people to customer support. If you're struggling with I...
+              </p>
+            </div>
           </div>
-          <div class="col-lg-6 col-sm-12">
-              <img class="academy-img" src="images/Group 54.png" alt="">
+          <div class="card">
+            <img src="images/blog_img_1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title font-weight-bold">8 digital skills we must teach our children</h2>
+              <p class="card-text">The social and economic impact of technology is widespread and accelerating. The speed and
+                volume of information has increased exponentially. Experts are showin...
+              </p>
+            </div>
           </div>
-      </div>
-  </section>
-
-  <section id="blog">
-    <h1 class="blog-h1 bold"><span class="dark">THE</span> <span class="red">BLOG</span></h1>
-    <div class="card-deck">
-      <div class="card">
-        <img src="images/Rectangle 31.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="blog-h5 card-title">Why we need to start talking about the digital skills gap</h5>
-          <p class="card-text">Social media knowledge is a job skill that's no longer a "nice-to-have", but a "must-have",
-            for everyone, from marketers to sales people to customer support. If you're struggling with I...
-          </p>
+          <div class="card">
+            <img src="images/blog_img_2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title font-weight-bold">How technology is Hijacking Your Mind - from a magician</h2>
+              <p class="card-text">When using technology, we often focus optimistically on all the things it does for us. But I 
+                want to show you where it might do the opposite. I can only imagine the exaggerat...
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="images/Rectangle 31 (1).png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="blog-h5 card-title">8 digital skills we must teach our children</h5>
-          <p class="card-text">The social and economic impact of technology is widespread and accelerating. The speed and
-            volume of information has increased exponentially. Experts are showin...
-          </p>
+        <div class="blog-btn">
+              <button type="button" class="btn btn-outline-danger ">See more <i class="fas fa-arrow-right fa-1.5x"></i></button>
         </div>
-      </div>
-      <div class="card">
-        <img src="images/Rectangle 31 (2).png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="blog-h5 card-title">How technology is Hijacking Your Mind - from a magician</h5>
-          <p class="card-text">When using technology, we often focus optimistically on all the things it does for us. But I 
-            want to show you where it might do the opposite. I can only imagine the exaggerat...
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="blog-btn">
-          <button type="button" class="btn btn-outline-danger ">See more <i class="fas fa-arrow-right fa-1.5x"></i></button>
-    </div>
-
-  </section>
-
-  <section id="footer-area">
-      <footer class="page-footer font-small blue pt-4">
-
+  
+      </section>
+    </main>
+  
+    <footer class="main-footer">
+  
       <!-- Footer Links -->
       <div class="container-fluid text-center text-md-left">
         <div class="row footer-elements">
-          <div class="col-md-4 mb-md-0 mb-6">
-            <h5 class="text-uppercase bold">QUICK LINKS</h5>
+          <div class="col-md-4">
+            <h5 class="text-uppercase font-weight-bold">QUICK LINKS</h5>
             <ul class="list-unstyled quick-links">
               <li>
                 <a href="about.html">About us</a>
@@ -235,53 +236,69 @@
               <li>
                 <a href="team.html">The Team</a>
               </li>
-              <li>
-                <a href="#!">Our Portfolio</a>
-              </li>
+              <!-- <li>
+                <a href="#">Our Portfolio</a>
+              </li> -->
               <li>
                 <a href="ideabrief.html">Brief your idea</a>
               </li>
             </ul>
-
+  
           </div>
-
-          <div class="col-md-4 mb-md-0 mb-3">
-            <h5 class="text-uppercase bold">CONTACT US</h5>
-            <ul class="list-unstyled extras">
+  
+          <div class="col-md-4">
+            <h5 class="text-uppercase font-weight-bold">CONTACT US</h5>
+            <ul class="list-unstyled">
               <li>
-                Eptadigitalinfo@gmail.com
+                <a href="mailto:eptadigitalinfo@gmail.com">eptadigitalinfo@gmail.com</a>
               </li>
               <li>
                 Customer care:
               </li>
               <li>
-                +2341234567890
+                <a href="tel:+2347081321222">+2347081321222</a>
               </li>
             </ul>
-
+  
           </div>
-
-          <div class="col-md-4 mt-md-0 mt-3">
-            <img src="images/svgg.png" alt="">
+  
+          <div class="col-md-4">
+            <img src="images/epta_logo_light.png" alt="epta digital logo">
             <ul class="social-media">
-              <li><a href=""><i class="fab fa-facebook-f fa-2.5x"></i></a></li>
-              <li><a href=""><i class="fab fa-instagram fa-2.5x"></i></a></li>
-              <li><a href=""><i class="fab fa-whatsapp fa-2.5x"></i></a></li>
-              <li><a href=""><i class="fab fa-linkedin-in fa-2.5x"></i></a></li>
+              <li><a href="https://m.facebook.com/EPTAdigital" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li>
+              <li><a href="https://instagram.com/theeptadigital" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+              <li><a href="https://twitter.com/EptaDigital" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+              <li><a href="" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/epta-digital-b58a4b1ba" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
             </ul>
           </div>
         </div>
       </div>
-
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+  
+      <div class="text-center py-3">&#169; 2020 Copyright:
         <a href=""> EPTA Digital</a>
       </div>
     </footer>
-  </section>
-  </main>
+  </div>
+
+  <div class="splash-section">
+    <img src="images/emblem.svg" alt="Epta digital emblem">
+  </div>
   
-    <script src="../index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script>
+    $("#services").on("click", ".card-footer", function() {
+      window.location.href = "ideabrief.html";
+      });
+
+    $(document).ready(() => {
+      setTimeout(() => {
+        $(".main-body").css("display", "block");
+        $(".splash-section").addClass("splash-fade");
+        $(".splash-section img").css("animation", "splash-img-fade 2s forwards");
+      }, 4200);
+    });
+  </script>
 </body> 
 </html>

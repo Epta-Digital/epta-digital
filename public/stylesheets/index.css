@@ -1,0 +1,94 @@
+.info {
+    text-align: center;
+}
+
+.info p {
+    line-height: 3em;
+    text-align: left;
+}
+
+
+/*services area*/
+#services h1 {
+    text-align: center;
+}
+
+.card {
+    /* transition-property: width height; */
+    transition-duration: 1s;
+}
+
+#services .card-body {
+    padding: 3rem 2rem;
+}
+
+#services .card-title {
+    color: var(--brand-color-secondary);
+    font-weight: bold;
+}
+
+#services .card-footer {
+    visibility: hidden;
+}
+
+.card:hover {
+    background-color: var(--brand-color-secondary);
+    color: var(--text-color);
+    transform: scale(1.05, 1.05);
+}
+
+#services .card:hover .card-title {
+    color: var(--text-color);
+}
+
+#services .card:hover .card-footer {
+    visibility: visible;
+    background-color: var(--brand-color-primary);
+    color: var(--brand-color-secondary);
+}
+
+#services .card-footer:hover {
+    color: var(--text-color);
+    background-color: var(--brand-color-secondary);
+}
+
+#services .card-text{
+    font-weight: lighter;
+    opacity: 90%;
+}
+
+.more-services {
+    background: radial-gradient(122.68% 218.37% at 15.36% 21.34%, #53BBF5 0%, rgba(45, 156, 219, 0) 100%);
+}
+
+
+/*academy area*/
+#academy {
+    text-align: left;
+}
+
+#academy img {
+    width: 100%;
+}
+
+
+/* blog area */
+#blog h1 {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+#blog h2 {
+    font-size: 1.25rem;
+}
+
+.blog-btn {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+@media all and (max-width: 576px) {
+    .info p {
+        line-height: 1.5rem;
+    }
+}

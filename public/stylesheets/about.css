@@ -1,0 +1,35 @@
+.about {
+    text-align: justify;
+}
+
+.about-content button p {
+    margin: 0;
+}
+
+
+@media all and (max-width:576px) {
+    .about {
+        padding: 7%;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-content div:last-child {
+        margin-left: 2.5rem;
+    }
+
+    .about-content button p {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .about-content button i {
+        transform: rotateZ(90deg);
+    }
+}

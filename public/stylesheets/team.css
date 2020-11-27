@@ -1,0 +1,70 @@
+:root {
+    --brand-color-secondary-blur: rgba(164, 4, 4, .1);
+}
+
+#team .card-body {
+    text-align: center;
+}
+
+#team hr {
+    width: 40%;
+    height: 2px;
+    margin: 10px auto;
+    background-image: linear-gradient(to right, var(--brand-color-secondary-blur), var(--brand-color-secondary), var(--brand-color-secondary-blur));
+    border-radius: 100%;
+  }
+
+#team .card {
+    box-shadow: 2px 8px 8px var(--brand-color-secondary-blur);
+}
+
+.team-content button p {
+    margin: 0;
+}
+
+.team-content > div:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.founder {
+    margin: 0 auto;
+}
+
+/* .founder {
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    width: 50%;
+}
+
+@media all and (max-width: 576px) {
+    .founder {
+        width: 100%;
+    }
+} */
+
+@media all and (min-width: 992px) {
+    .team-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .team-content > div:last-child {
+        margin-left: 2.5rem;
+    }
+
+    /* .team-content button {
+        position: relative;
+        top: -20rem;
+    } */
+
+    .team-content button p {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .team-content button i {
+        transform: rotateZ(90deg);
+    }
+}
