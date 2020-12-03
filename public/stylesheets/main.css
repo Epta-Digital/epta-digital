@@ -60,44 +60,53 @@ section h1 {
     color: var(--brand-color-primary);
 }
 
-/*****************************************************/
-/*********************** nav *************************/
-/*****************************************************/
-#navbar {
-    padding: 1% 7%;
+.header-container {
+    background-image: url('../images/epta-bg-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
-.navbar {
-    background-image: url('../images/home_bg.png');
-    padding: auto 5%;
-    color: var(--text-color);
+.header-overlay {
+    background-image: linear-gradient(to right, rgba(4, 4, 4, 1), rgba(134, 0, 0, .3));
+    min-height: 100vh;
 }
 
-.navbar-brand {
-    margin-right: 10rem;
+.bg-circle, .bg-polygon {
+    display: inline-block;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
 }
 
-.navbar img {
-    width: 70%;
+.bg-circle {
+    background-color: rgba(234, 213, 213, .08);
+    border-radius: 50%;
+    top: 25%;
+    right: 20%;
 }
 
-.nav-item {
-    font-weight: bold;
-    margin-right: 3rem;
-}
-
-.nav-link {
-    outline: none;
-    text-decoration: none;
+.bg-polygon {
+    background-image: url('../images/poly-heptagon.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 30%;
+    left: 20%;
 }
 
 .intro {
-    background-image: url('../images/home_bg.png');
     color: var(--text-color);
     text-align: center;
-    padding: 14% 20%;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.intro > div {
+    align-self: center;
 }
 
 /*****************************************************/
@@ -165,7 +174,7 @@ section h1 {
 
 .splash-section img {
     width: 30%;
-    animation-name: splash-animation;
+    /* animation-name: splash-animation; */
     animation-duration: 4s;
 }
 
@@ -190,6 +199,21 @@ section h1 {
     to {transform: scale(2.8, 2.8) rotateZ(-22deg); opacity: .2;}
 }
 
+@keyframes bg-anim-0 {
+    from {background-image: url('../images/epta-bg-3.png');}
+    to {background-image: url('../images/epta-bg-1.png');}
+}
+
+@keyframes bg-anim-1 {
+    from {background-image: url('../images/epta-bg-1.png');}
+    to {background-image: url('../images/epta-bg-2.png');}
+}
+
+@keyframes bg-anim-2 {
+    from {background-image: url('../images/epta-bg-2.png');}
+    to {background-image: url('../images/epta-bg-3.png');}
+}
+
 @media all and (min-width: 992px) {
     .splash-section img {
         width: 20%;
@@ -209,15 +233,12 @@ section h1 {
     }
 
     .intro {
-        padding: 15% 10% 5% 10%;
+        padding: 15% 2%;
     }
 
-    .intro h1 {
-        font-size: 2rem;
-    }
-
-    .navbar-brand {
-        margin-right: auto;
+    .bg-circle, .bg-polygon {
+        width: 8rem;
+        height: 8rem;
     }
     
     .main-footer {
@@ -232,7 +253,37 @@ section h1 {
 
 /* Small devices (landscape), Tablets */
 @media all and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
     main > section {
         padding: 5%;
+    }
+
+    .header-container {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header-border {
+        background-image: url('../images/epta-bg-border.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 5vh;
+    }
+
+    .intro h1 {
+        font-size: 2em;
+    }
+
+    .bg-circle {
+        top: 30%;
+        right: 18%;
+    }
+    
+    .bg-polygon {
+        top: 35%;
+        left: 18%;
     }
 }

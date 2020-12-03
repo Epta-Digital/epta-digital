@@ -1,0 +1,65 @@
+.custom-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+#brandpkg .card {
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    margin-top: .6rem;
+}
+
+#brandpkg .card img {
+    position: relative;
+    top: 0;
+}
+
+#brandpkg .card > .list-group {
+    border-top-width: 0;
+}
+
+#brandpkg .list-group-flush > .list-group-item {
+    border-width: 0;
+    padding-bottom: 0;
+    padding-top: .5rem;
+}
+
+#brandpkg .list-group-item:last-child {
+    padding-bottom: .75rem;
+}
+
+#brandpkg .list-group-item i {
+    color: #51cf66;
+}
+
+#brandpkg .card-footer:last-child {
+    border-radius: 0 0 1rem 1rem;
+}
+
+.unavailable {
+    opacity: .2;
+}
+
+.basic-footer, .standard-footer, .premium-footer {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.basic-footer {
+    background-color: #575deb;
+}
+
+.standard-footer {
+    background-color: #55d962;
+}
+
+.premium-footer {
+    background-color: #eb5757;
+}
+
+@media all and (max-width: 567px) {
+    #brandpkg .card {
+        margin-top: 2rem;
+    }
+}

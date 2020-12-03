@@ -16,54 +16,58 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- stylesheet -->
     <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/custom_navbar.css">
     <link rel="stylesheet" href="stylesheets/team.css">
  
     <title>The team</title>
 </head>
 
 <body>
-  <header>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg transparent navbar-dark danger-color fixed-top" id="navbar">
-      <!-- Navbar brand -->
-      <a href="index.html"><img class="navbar-brand" src="images/logo.svg" alt="epta digital logo"></a>
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#academy">Academy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">Blog</a>
-          </li> 
-        </ul>  
-        <!-- Links -->
-        <button type="button" class="btn btn-outline-light" onclick="location.href = 'ideabrief.html'">Get started</button>
-      </div>
-      <!-- Collapsible content -->
-    </nav>
-  </header>
+  <div class="header-container">
+    <div class="header-overlay">
+      <header class="fixed-top">
+        <nav class="navbar navbar-dark">
+          <a href="index.html"><img class="navbar-brand" src="images/epta_logo_light.png" alt="epta digital logo"></a>
+          <div class="nav-trigger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="nav-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="academy.html">Academy</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="about.html">About us</a>
+              </li> 
+            </ul>
+            <button type="button" class="btn btn-light" onclick="location.href = 'ideabrief.html'">Get started</button>
+          </div>
+        </nav>
+      </header>
+
+      <section class="intro">
+        <div>
+          <h1>YOUR ONE-STOP AGENCY FOR <br>PREMIUM DIGITAL SERVICES</h1>
+          <p>In record time, we help transition your personal idea into viable products and brands.</p>
+          <!-- <button type="button" class="btn btn-outline-light">Our Portfolio</button> -->
+        </div>
+      </section>
+    </div>
+    <div class="header-border"></div>
+    <div class="bg-circle"></div>
+    <div class="bg-polygon"></div>
+  </div>
 
   <main>
-    <section class="intro">
-      <h1>YOUR ONE-STOP AGENCY FOR <br>PREMIUM DIGITAL SERVICES</h1>
-      <p>In record time, we help transition your personal idea into viable products and brands.</p>
-      <!-- <button type="button" class="btn btn-outline-light">Our Portfolio</button> -->
-    </section>
-
     <section id="team">
         <h1><span class="dark">THE</span> <span class="red">TEAM</span></h1>
         <p>We deliver the best services to help you increase sales and revenue in record time while serving you professionally.</p>
@@ -75,7 +79,7 @@
                   <img src="images/profiles/founder.png" class="card-img-top" alt="Founder">
                   <div class="card-body">
                     <h5 class="card-title">Iyegbekedo Bright</h5> <hr>
-                    <p class="card-text">Founder</p>
+                    <p class="card-text division-name">Founder</p>
                   </div>
                 </div>
               </div>
@@ -83,10 +87,12 @@
             <div class="row row-cols-1 row-cols-md-2">
                 <div class="col mb-4">
                   <div class="card">
-                    <img src="images/profiles/strategy.png" class="card-img-top" alt="Lead strategist">
+                    <img src="images/profiles/operations_manager.jpg" class="card-img-top" alt="Operations manager">
                     <div class="card-body">
+                      <!-- <div class="triangle"></div> -->
                       <h5 class="card-title">Mathias Ekaette</h5> <hr>
-                      <p class="card-text">Strategy</p>
+                      <p class="card-text">&nbsp;</p>
+                      <p class="card-text division-name">Operations Manager</p>
                     </div>
                   </div>
                 </div>
@@ -95,7 +101,8 @@
                     <img src="images/profiles/business_consultant.png" class="card-img-top" alt="Lead business consultant">
                     <div class="card-body">
                       <h5 class="card-title">Gloria Olohi</h5> <hr>
-                      <p class="card-text">Business Consultant</p>
+                      <p class="card-text">Team Lead</p>
+                      <p class="card-text division-name">Business Consultant</p>
                     </div>
                   </div>
                 </div>
@@ -104,7 +111,8 @@
                     <img src="images/profiles/content_writer.png" class="card-img-top" alt="Lead content writer">
                     <div class="card-body">
                       <h5 class="card-title">Okpanachi Gloria</h5> <hr>
-                      <p class="card-text">Content Writing</p>
+                      <p class="card-text">Team Lead</p>
+                      <p class="card-text division-name">Content Writing</p>
                     </div>
                   </div>
                 </div>
@@ -113,7 +121,8 @@
                     <img src="images/profiles/ui_ux_designer.png" class="card-img-top" alt="Lead UI/UX designer">
                     <div class="card-body">
                       <h5 class="card-title">Asemota Joel</h5> <hr>
-                      <p class="card-text">UI/UX Design</p>
+                      <p class="card-text">Team Lead</p>
+                      <p class="card-text division-name">UI/UX Design</p>
                     </div>
                   </div>
                 </div>
@@ -122,7 +131,8 @@
                       <img src="images/profiles/graphics_design.png" class="card-img-top" alt="Lead graphics designer">
                       <div class="card-body">
                         <h5 class="card-title">Afemike Joachim</h5> <hr>
-                        <p class="card-text">Graphics Design</p>
+                        <p class="card-text">Team Lead</p>
+                        <p class="card-text division-name">Graphics Design</p>
                       </div>
                     </div>
                 </div>
@@ -131,7 +141,8 @@
                       <img src="images/profiles/web_dev.png" class="card-img-top" alt="Lead web developer">
                       <div class="card-body">
                         <h5 class="card-title">Igbeka Uche</h5> <hr>
-                        <p class="card-text">Web Development</p>
+                        <p class="card-text">Team Lead</p>
+                        <p class="card-text division-name">Web Development</p>
                       </div>
                     </div>
                 </div>
@@ -140,16 +151,18 @@
                     <img src="images/profiles/video_photography.png" class="card-img-top" alt="Lead videographer/photographer">
                     <div class="card-body">
                       <h5 class="card-title">Iyegbekedo Walter</h5> <hr>
-                      <p class="card-text">Photography/Videography</p>
+                      <p class="card-text">Team Lead</p>
+                      <p class="card-text division-name">Photography/Videography</p>
                     </div>
                   </div>
               </div>
               <div class="col mb-4">
                 <div class="card">
-                  <img src="images/profiles/business_consultant.png" class="card-img-top" alt="Lead business consultant">
+                  <img src="images/profiles/ad.png" class="card-img-top" alt="Team lead for advertising">
                   <div class="card-body">
-                    <h5 class="card-title">Gloria Olohi</h5> <hr>
-                    <p class="card-text">Business Consultant</p>
+                    <h5 class="card-title">Umunakwe Chidinma</h5> <hr>
+                    <p class="card-text">Team Lead</p>
+                    <p class="card-text division-name">Advertising</p>
                   </div>
                 </div>
               </div>
@@ -221,5 +234,7 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="javascripts/jquery-3.5.1.js"></script>
+  <script src="javascripts/custom_navbar.js"></script>
 </body> 
 </html>

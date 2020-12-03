@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- stylesheet -->
     <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/custom_navbar.css">
     <link rel="stylesheet" href="stylesheets/about.css">
 
  
@@ -23,48 +24,51 @@
 </head>
 
 <body>
-  <header>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg transparent navbar-dark danger-color fixed-top" id="navbar">
-      <!-- Navbar brand -->
-      <a href="index.html"><img class="navbar-brand" src="images/logo.svg" alt="epta digital logo"></a>
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#academy">Academy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">Blog</a>
-          </li> 
-        </ul>  
-        <!-- Links -->
-        <button type="button" class="btn btn-outline-light" onclick="location.href = 'ideabrief.html'">Get started</button>
-      </div>
-      <!-- Collapsible content -->
-    </nav>
-  </header>
+  <div class="header-container">
+    <div class="header-overlay">
+      <header class="fixed-top">
+        <nav class="navbar navbar-dark">
+          <a href="index.html"><img class="navbar-brand" src="images/epta_logo_light.png" alt="epta digital logo"></a>
+          <div class="nav-trigger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="nav-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="academy.html">Academy</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="about.html">About us</a>
+              </li> 
+            </ul>
+            <button type="button" class="btn btn-light" onclick="location.href = 'ideabrief.html'">Get started</button>
+          </div>
+        </nav>
+      </header>
+
+      <section class="intro">
+        <div>
+          <h1>YOUR ONE-STOP AGENCY FOR <br>PREMIUM DIGITAL SERVICES</h1>
+          <p>In record time, we help transition your personal idea into viable products and brands.</p>
+          <!-- <button type="button" class="btn btn-outline-light">Our Portfolio</button> -->
+        </div>
+      </section>
+    </div>
+    <div class="header-border"></div>
+    <div class="bg-circle"></div>
+    <div class="bg-polygon"></div>
+  </div>
 
   <main>
-    <section class="intro">
-      <h1>YOUR ONE-STOP AGENCY FOR <br>PREMIUM DIGITAL SERVICES</h1>
-      <p>In record time, we help transition your personal idea into viable products and brands.</p>
-      <!-- <button type="button" class="btn btn-outline-light">Our Portfolio</button> -->
-    </section>
-
     <section class="about">
       <h1 class="font-weight-bold"><span class="dark">OUR</span> <span class="red">STORY</span></h1>
       <div class="about-content">
@@ -148,5 +152,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  </body> 
-  </html>
+    <script src="javascripts/jquery-3.5.1.js"></script>
+    <script src="javascripts/custom_navbar.js"></script>
+</body> 
+</html>
