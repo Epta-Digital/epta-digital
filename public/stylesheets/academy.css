@@ -1,0 +1,31 @@
+ /**************************/
+ /**** popular courses *****/
+ /**************************/
+ #popular-courses h1{
+     text-align: center;
+     margin: 3%;
+ }
+
+ .academy-img{
+     width: 30%;
+ }
+
+.grid-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grid-container h4{
+    padding-bottom: 1.5rem;
+}
+
+@media all and (max-width: 600px){
+    .academy-img{
+        width: 80%;
+    }
+    
+    .grid-container{ 
+        flex-direction: column;
+    }
+}
