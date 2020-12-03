@@ -3,12 +3,14 @@ let navColorScrollLimit = 100;
 let navBarColor = "rgba(4, 4, 4, 0)";
 
 $(document).ready(() => {
-    $(".navbar").css("background-color", navBarColor);
-    $(window).on("scroll", () => {
-        navColorOpacity = $(document).scrollTop() / navColorScrollLimit;
-        navBarColor = `rgba(4, 4, 4, ${navColorOpacity})`;
+    if (!$(".navbar").hasClass("no-fade")) {
         $(".navbar").css("background-color", navBarColor);
-    });
+        $(window).on("scroll", () => {
+            navColorOpacity = $(document).scrollTop() / navColorScrollLimit;
+            navBarColor = `rgba(4, 4, 4, ${navColorOpacity})`;
+            $(".navbar").css("background-color", navBarColor);
+        });
+    }
 });
 
 $('.nav-trigger').click(function () {

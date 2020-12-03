@@ -1,6 +1,11 @@
  /**************************/
  /**** popular courses *****/
  /**************************/
+ .header-container {
+    background-image: url('../images/academy-1.png');
+    background-position: center;
+}
+
  #popular-courses h1{
      text-align: center;
      margin: 3%;
