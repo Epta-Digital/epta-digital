@@ -1,0 +1,47 @@
+
+.web-development{
+    display: flex;
+    flex-direction: row;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.web-dev-img{
+    width: 50%;
+}
+
+.what-to-learn{
+    margin-bottom: 4rem;
+}
+.what-to-learn h1{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.icon{
+    width: 25%;
+    margin-bottom: 1.5rem;
+}
+
+.learning{
+    text-align: center;
+}
+
+.learning h5{
+    margin-bottom: 1.5rem;
+}
+
+.enroll{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+@media all and (max-width: 600px){
+    .web-development{
+        flex-direction: column;
+    }
+    .web-dev-img{
+        width: 100%;
+    }
+}
