@@ -45,3 +45,9 @@
         width: 100%;
     }
 }
+
+@media (max-width: 768px){
+    .web-development{
+        margin-top: 8rem;
+    }
+}
