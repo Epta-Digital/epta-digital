@@ -99,11 +99,11 @@ app.post('/form', upload.single('attachFile'), async(req, res) => {
                <br>
                Company: ${form.company}<br>Email: ${form.email}<br>phone: ${form.mobile}<br>budget: ${form.budget}<br>dateOfDelivery: ${form.dateofdelivery}`
       }
-      // const sendMail = await sgmail.send(msg);
-      // if(!sendMail) {
-            // res.status(400);
-      //    throw new Error('Error sending mail');
-      // }
+      const sendMail = await sgmail.send(msg);
+      if(!sendMail) {
+            res.status(400);
+         throw new Error('Error sending mail');
+      }
 
       await newForm.save();
       res.send('Form saved & Email sent')
