@@ -408,6 +408,16 @@
     $("#services").on("click", ".card-footer", function() {
       window.location.href = "ideabrief.html";
       });
+    
+    function parseUrl() {
+      const url = document.URL;
+      if (url.includes("#")) {
+        const elementId = url.slice(url.search("#"));
+        $("html, body").animate({
+          scrollTop: $(elementId).offset().top - 100
+        }, 1000);
+      }
+    }
 
     $(document).ready(() => {
       $(".splash-section img").css("animation-name", "splash-animation");
@@ -416,6 +426,7 @@
         $(".splash-section").addClass("splash-fade");
         $(".splash-section img").css("animation", "splash-img-fade 2s forwards");
         start_bg_animation();
+        parseUrl()
       }, 4200);
     });
   </script>

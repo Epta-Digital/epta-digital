@@ -10,6 +10,7 @@ $(document).ready(() => {
             navBarColor = `rgba(4, 4, 4, ${navColorOpacity})`;
             $(".navbar").css("background-color", navBarColor);
         });
+        $(window).scroll();
     }
 });
 
