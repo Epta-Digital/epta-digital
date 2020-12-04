@@ -1,3 +1,7 @@
+.header-container {
+    background-image: url('../images/epta-bg-3.png');
+}
+
 .about {
     text-align: justify;
 }

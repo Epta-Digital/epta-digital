@@ -10,7 +10,7 @@
 
 @media all and (min-width: 768px) {
     .ideabrief {
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
 
     .submit-div {
@@ -20,5 +20,11 @@
 
     .submit-div button {
         margin: auto auto;
+    }
+}
+
+@media (max-width: 768px){
+    .ideabrief{
+        margin-top: 5rem;
     }
 }

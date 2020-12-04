@@ -2,6 +2,22 @@
     --brand-color-secondary-blur: rgba(164, 4, 4, .1);
 }
 
+.header-container {
+    background-image: url('../images/epta-bg-2.png');
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 174px solid transparent;
+    border-right: 174px solid #fff;
+    position: relative;
+    top: -40px;
+    left: -20px;
+}
+
 #team .card-body {
     text-align: center;
 }
@@ -12,7 +28,12 @@
     margin: 10px auto;
     background-image: linear-gradient(to right, var(--brand-color-secondary-blur), var(--brand-color-secondary), var(--brand-color-secondary-blur));
     border-radius: 100%;
-  }
+}
+
+.division-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
 #team .card {
     box-shadow: 2px 8px 8px var(--brand-color-secondary-blur);

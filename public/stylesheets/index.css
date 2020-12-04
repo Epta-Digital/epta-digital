@@ -13,7 +13,7 @@
     text-align: center;
 }
 
-.card {
+#services .card {
     /* transition-property: width height; */
     transition-duration: 1s;
 }
@@ -31,7 +31,7 @@
     visibility: hidden;
 }
 
-.card:hover {
+#services .card:hover {
     background-color: var(--brand-color-secondary);
     color: var(--text-color);
     transform: scale(1.05, 1.05);
@@ -90,5 +90,12 @@
 @media all and (max-width: 576px) {
     .info p {
         line-height: 1.5rem;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #services .card {
+        width: 90%;
+        margin: 0 auto;
     }
 }

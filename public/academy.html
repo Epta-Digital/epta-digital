@@ -17,11 +17,11 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="stylesheets/main.css">
     <link rel="stylesheet" href="stylesheets/custom_navbar.css">
-    <link rel="stylesheet" href="stylesheets/about.css">
+    <link rel="stylesheet" href="stylesheets/academy.css">
 
  
-    <title>About Us</title>
-</head>
+    <title>Academy</title>
+</head> 
 
 <body>
   <div class="header-container">
@@ -43,10 +43,10 @@
               <li class="nav-item">
                 <a class="nav-link " href="index.html">Services</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="academy.html">Academy</a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="about.html">About us</a>
               </li> 
             </ul>
@@ -69,25 +69,78 @@
   </div>
 
   <main>
-    <section class="about">
-      <h1 class="font-weight-bold"><span class="dark">OUR</span> <span class="red">STORY</span></h1>
-      <div class="about-content">
-        <div>
-          <p>
-            We at Epta Digital are a team of Gen Zed creatives that infuses creativity, innovation & entrepreneurship with hard work, dedication & professionalism to drive home our goal of providing the best digital services you need to increase sales and revenue in record time.
-            We exist to deliver the best services saving you time searching for different individual techies or tech savvies to help build your brand, design (- graphics, website, desktop or mobile application), write selling copies or persuasive contents, manage or optimize your social media business accounts for more sales amongst other services we provide. Epta Digital is a one-stop platform to meet all of your digital needs.
-            We deliver services to 3 distinct groups:<br>
-            <ol>
-                <li>People with personal ideas, we can help you bring your personal idea to light and turn it into a viable product.</li>
-                <li>People with already existing brands and products, we provide individual services for optimization of your brand or product.</li>
-                <li>People who want to learn from our virtual or physical classes through our Academy.</li>
-            </ol>
-            To reach out to us, fill this form <a href="ideabrief.html">here</a> or contact us directly through any of our social media handles, our DMs are open or place a call directly to our customer service line. 
-          </p>
-        </div>
-        <div>
-          <button type="button" class="btn btn-outline-danger" onclick="location.href = 'team.html'"><p>Meet the team <i class="fas fa-arrow-right fa-1.5x"></i></p></button>
-        </div>
+    <section id="popular-courses">
+      <h1><span class="dark">OUR</span><span class="red"> POPULAR COURSES</span></h1>
+      <div class="container-fluid">
+        <div class="row">
+          <!--web development-->
+          <div class="col-md-12">
+            <div class="card mb-5">
+              <div class="card-body">
+                <div class="grid-container">
+                  <img src="images/academy_images/pixeltrue-web-development-1.svg" alt="a web development illustration" class="academy-img">
+                  <div>
+                    <h4 class="red">Introduction to web development</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Eos ipsa repellendus enim. Dolores magni necessitatibus aliquid modi fuga distinctio vel quas, 
+                      facilis ea quidem adipisci repudiandae, soluta atque mollitia! Assumenda.</p>
+                    <button class="btn btn-outline-danger" onclick="location.href = 'web-development.html'">View course</button>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+            <!--ui/ux design-->
+          <div class="col-md-12">
+            <div class="card mb-5">
+              <div class="card-body">
+                <div class="grid-container">
+                  <img src="images/academy_images/gummy-ux-slash-ui-design.svg" alt="a ui/ux illustration" class="academy-img">
+                  <div>
+                    <h4 class="red">Introduction to UI/UX design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Eos ipsa repellendus enim. Dolores magni necessitatibus aliquid modi fuga distinctio vel quas, 
+                      facilis ea quidem adipisci repudiandae, soluta atque mollitia! Assumenda.</p>
+                    <button class="btn btn-outline-danger" onclick="location.href = 'ui-ux.html'">View course</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+            <!--photography-->
+          <div class="col-md-12">
+            <div class="card mb-5">
+              <div class="card-body">
+                <div class="grid-container">
+                  <img src="images/academy_images/gummy-vintage-camera.svg" alt="a camera illustration" class="academy-img">
+                  <div>
+                    <h4 class="red">Introduction to Photography</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Eos ipsa repellendus enim. Dolores magni necessitatibus aliquid modi fuga distinctio vel quas, 
+                      facilis ea quidem adipisci repudiandae, soluta atque mollitia! Assumenda.</p>
+                    <button class="btn btn-outline-danger" onclick="location.href = 'photography.html'">View course</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!--graphics design-->
+          <div class="col-md-12">
+            <div class="card mb-5">
+              <div class="card-body">
+                <div class="grid-container">
+                  <img src="images/academy_images/gummy-wacoom.svg" alt="a graphic design illustration" class="academy-img">
+                  <div>
+                    <h4 class="red">Introduction to graphics design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Eos ipsa repellendus enim. Dolores magni necessitatibus aliquid modi fuga distinctio vel quas, 
+                      facilis ea quidem adipisci repudiandae, soluta atque mollitia! Assumenda.</p>
+                    <button class="btn btn-outline-danger" onclick="location.href = 'graphics-design.html'">View course</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
   </main>
@@ -154,5 +207,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="javascripts/jquery-3.5.1.js"></script>
     <script src="javascripts/custom_navbar.js"></script>
-</body> 
-</html>
+  </body> 
+  </html>
