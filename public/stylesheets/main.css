@@ -3,6 +3,7 @@
 :root {
     --brand-color-primary: #ffffff;
     --brand-color-secondary: #bf0000;
+    --brand-color-secondary-blur: rgba(164, 4, 4, .1);
     --barnd-color-dark: #040404;
     --text-color: #ffffff;
     --text-color-dark: #000000;
@@ -107,6 +108,42 @@ section h1 {
 
 .intro > div {
     align-self: center;
+}
+
+.animate {
+    visibility: hidden;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+.enlarge {
+    animation-name: anim-enlarge;
+    visibility: visible;
+}
+
+.show-left {
+    visibility: visible;
+    animation-name: anim-show-left;
+}
+
+.show-right {
+    visibility: visible;
+    animation-name: anim-show-right;
+}
+
+@keyframes anim-enlarge {
+    from {transform: scale(0, 0); opacity: 0;}
+    to {transform: scale(1, 1); opacity: 1;}
+}
+
+@keyframes anim-show-left {
+    from {transform: translateX(-200px); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes anim-show-right {
+    from {transform: translateX(200px);}
+    to {transform: translateX(0);}
 }
 
 /*****************************************************/
@@ -261,10 +298,6 @@ section h1 {
         padding: 5%;
     }
 
-    .header-container {
-        background-position: center;
-    }
-
     .header-border {
         background-image: url('../images/epta-bg-border.png');
         background-repeat: no-repeat;
@@ -284,5 +317,11 @@ section h1 {
     .bg-polygon {
         top: 35%;
         left: 18%;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .header-container {
+        background-position: 70% 50%;
     }
 }

@@ -1,7 +1,3 @@
-:root {
-    --brand-color-secondary-blur: rgba(164, 4, 4, .1);
-}
-
 .header-container {
     background-image: url('../images/epta-bg-2.png');
 }

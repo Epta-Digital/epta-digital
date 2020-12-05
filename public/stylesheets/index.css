@@ -91,11 +91,23 @@
     .info p {
         line-height: 1.5rem;
     }
+
+    #academy img {
+        width: 100%;
+    }
 }
 
 @media all and (max-width: 768px) {
     #services .card {
         width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 992px) {
+    #academy img {
+        width: 80%;
+        display: block;
         margin: 0 auto;
     }
 }

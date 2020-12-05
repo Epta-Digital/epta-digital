@@ -1,5 +1,8 @@
+.card {
+    box-shadow: 2px 8px 8px var(--brand-color-secondary-blur);
+}
 
-.web-development{
+.web-development {
     display: flex;
     flex-direction: row;
     margin-top: 6rem;
@@ -7,47 +10,48 @@
     align-items: center;
 }
 
-.web-dev-img{
+.web-dev-img {
     width: 50%;
 }
 
-.what-to-learn{
+.what-to-learn {
     margin-bottom: 4rem;
 }
-.what-to-learn h1{
+.what-to-learn h1 {
     text-align: center;
     margin-bottom: 2.5rem;
 }
 
-.icon{
+.icon {
     width: 25%;
     margin-bottom: 1.5rem;
 }
 
-.learning{
+.learning {
     text-align: center;
 }
 
-.learning h5{
+.learning h5 {
     margin-bottom: 1.5rem;
 }
 
-.enroll{
+.enroll {
     text-align: center;
     margin-bottom: 4rem;
 }
 
-@media all and (max-width: 600px){
-    .web-development{
+@media all and (max-width: 600px) {
+    .web-development {
         flex-direction: column;
     }
-    .web-dev-img{
+
+    .web-dev-img {
         width: 100%;
     }
 }
 
-@media (max-width: 768px){
-    .web-development{
+@media (max-width: 768px) {
+    .web-development {
         margin-top: 8rem;
     }
 }

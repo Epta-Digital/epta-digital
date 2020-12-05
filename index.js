@@ -28,32 +28,33 @@ db.on('error', err => {
 const Schema = mongoose.Schema;
 
 const formSchema = new Schema({
-   company: {
+   companyName: {
       type: String,
       required: [ true, 'Company field is required']
    },
-   email: {
+   emailAddr: {
       type: String,
       required: [ true, 'Email is required']
    },
-   mobile: {
-      type: Number,
+   mobileNo: {
+      type: String,
       required: [true, 'Mobile is required']
    },
    services: [{
       type: String,
-      enum: ['graphics design', 'ui/ux', 'photography/videography', 'copywriting/contentWriting', 'web development', 'Animations', 'brand strategy/consultancy'],
+      enum: ['design', 'ui-ux', 'photography', 'contentWriting', 'webDev', 'animations', 'brandStrategy'],
       required: true
    }],
    budget: {
       type: String,
       required: true
    },
-   dateofdelivery: {
+   dateOfDelivery: {
       type: Date
    },
    brief: {
-      type: String
+      type: String,
+      required: true
    },
    attachFile: {
       type: String
@@ -81,7 +82,7 @@ const upload = multer({ storage })
 app.post('/form', upload.single('attachFile'), async(req, res) => {
    try {
       const form = req.body;
-      const attachment = req.file.path;
+      const attachment = req.file ? req.file.path : "";
       form.attachFile = attachment;
       const newForm = new Form(form);
       console.log(form);
@@ -90,15 +91,17 @@ app.post('/form', upload.single('attachFile'), async(req, res) => {
          return res.send('Error')
       }
       const msg = {
-         to: form.email,
+         to: form.emailAddr,
          from: 'eptadigitalinfo@gmail.com',
-         subject: 'Testing Email Sending',
-         html: `<h2>Thanks for contacting us</h2>
-               <br>
-               <p>We've received your feedback(below) and we are working on it right away</p>
-               <br>
-               Company: ${form.company}<br>Email: ${form.email}<br>phone: ${form.mobile}<br>budget: ${form.budget}<br>dateOfDelivery: ${form.dateofdelivery}`
+         subject: 'Epta Digital',
+         html: `<p>Hello ${form.emailAddr}</p>
+         <p>Thank you for your email. Welcome to <b>Epta Digital Agency</b>. We'll be in touch soon to schedule a time to hear your great ideas.</p>
+         <p>You can expect a reply ASAP. For anything you need right away, you can call us via any of these phone numbers <a href="tel:+2347081321222">+2347081321222</a> <a href="tel:+2349024654553">+2349024654553</a></p>
+         <p>Regards,<br>
+         Chidinma Umunakwe,<br>
+         For: Epta Digital Agency</p>`
       }
+
       const sendMail = await sgmail.send(msg);
       if(!sendMail) {
             res.status(400);
@@ -130,7 +133,7 @@ app.use((error, req, res, next) => {
 })
 
 //Set up port listener
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
    console.log(`App running on port ${PORT}`);

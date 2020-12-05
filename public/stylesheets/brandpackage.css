@@ -58,8 +58,12 @@
     background-color: #eb5757;
 }
 
-@media all and (max-width: 567px) {
+@media all and (max-width: 992px) {
     #brandpkg .card {
         margin-top: 2rem;
+    }
+
+    #brandpkg .card-centered {
+        margin: 0 auto;
     }
 }
