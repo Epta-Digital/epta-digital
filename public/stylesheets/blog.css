@@ -1,0 +1,61 @@
+.header-container {
+    background-image: url('../images/epta-bg-3.png');
+}
+
+/* blog area */
+#blog h1 {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+#blog h2 {
+    font-size: 1.25rem;
+}
+
+.blog-btn {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+
+/* article */
+#article{
+    margin: 7rem 20rem 2rem;
+    border: 1px solid grey;
+    border-radius: 5%;
+    box-sizing: border-box;
+}
+
+.article-content{
+    padding: 7% 10%;
+}
+
+.article-content h4{
+    margin-bottom: 1.5rem;
+}
+
+.blog-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+
+
+@media (max-width: 800px){
+    #article{
+        margin: 7rem auto;
+        border-radius: 0;
+    }
+    
+    .article-content{
+        padding: 7% 2%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1100px){
+    #article{
+        margin: 7rem 5%;
+    }
+}
