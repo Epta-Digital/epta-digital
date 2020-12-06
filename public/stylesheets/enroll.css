@@ -5,3 +5,15 @@
     background-position: center;
     min-height: 100vh;
 }
+
+@media all and (min-width: 768px) {
+    .enroll{
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 768px){
+    .enroll{
+        margin-top: 5rem;
+    }
+}
