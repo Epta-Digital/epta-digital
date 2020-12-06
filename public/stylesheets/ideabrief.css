@@ -8,6 +8,15 @@
     width: 30%;
 }
 
+.form-control:focus {
+    border-color: var(--brand-color-secondary);
+    box-shadow: var(--brand-color-secondary-blur) 0px 0px 0px 3.2px;
+}
+
+textarea {
+    min-height: 10rem;
+}
+
 @media all and (min-width: 768px) {
     .ideabrief {
         margin-top: 4rem;

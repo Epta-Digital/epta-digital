@@ -266,7 +266,6 @@ section h1 {
 @media all and (max-width:576px) {
     section h1 {
         font-size: 2rem;
-        padding-top: 2rem;
     }
 
     .intro {
@@ -292,6 +291,11 @@ section h1 {
 @media all and (max-width: 768px) {
     html {
         font-size: 14px;
+    }
+
+    section h1 {
+        font-size: 2rem;
+        padding-top: 2rem;
     }
 
     main > section {

@@ -1,0 +1,68 @@
+main {
+    padding: 0 10%;
+}
+
+.blog-post {
+    margin-top: 4rem;
+}
+
+.blog-post h1 {
+    color: var(--brand-color-secondary);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author-name {
+    font-weight: bold;
+}
+
+.date-duration {
+    font-size: .9rem;
+}
+
+.author > div > p {
+    margin: 0;
+    padding: 0;
+}
+
+.author img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.blog-img img {
+    width: 100%;
+}
+
+.blog-img figcaption {
+    font-size: .8rem;
+    font-style: italic;
+}
+
+.related-posts .card {
+    transition-duration: 1s;
+}
+
+.related-posts .card:hover {
+    background-color: var(--brand-color-secondary);
+    color: var(--text-color);
+    transform: scale(1.05, 1.05);
+}
+
+.related-posts h1 {
+    font-size: 2rem;
+}
+
+.related-posts button {
+    margin: 0 auto;
+    display: block;
+}
+
+@media all and (min-width: 922px) {
+    .author img {
+        width: 10%;
+    }
+}

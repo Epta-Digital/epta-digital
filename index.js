@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 sgmail.setApiKey(process.env.SGMAIL_API_KEY);
+sgmail.setSubstitutionWrappers('{{', '}}');
 
 //Mongo setup
 const db_url = process.env.MONGO_URI;
@@ -42,7 +43,7 @@ const formSchema = new Schema({
    },
    services: [{
       type: String,
-      enum: ['design', 'ui-ux', 'photography', 'contentWriting', 'webDev', 'animations', 'brandStrategy'],
+      enum: ['design', 'ui-ux', 'photography', 'contentWriting', 'webDev', 'animations', 'brandStrategy', 'basicPkg', 'standardPkg', 'premiumPkg'],
       required: true
    }],
    budget: {
@@ -93,13 +94,8 @@ app.post('/form', upload.single('attachFile'), async(req, res) => {
       const msg = {
          to: form.emailAddr,
          from: 'eptadigitalinfo@gmail.com',
-         subject: 'Epta Digital',
-         html: `<p>Hello ${form.emailAddr}</p>
-         <p>Thank you for your email. Welcome to <b>Epta Digital Agency</b>. We'll be in touch soon to schedule a time to hear your great ideas.</p>
-         <p>You can expect a reply ASAP. For anything you need right away, you can call us via any of these phone numbers <a href="tel:+2347081321222">+2347081321222</a> <a href="tel:+2349024654553">+2349024654553</a></p>
-         <p>Regards,<br>
-         Chidinma Umunakwe,<br>
-         For: Epta Digital Agency</p>`
+         templateId: 'd-a0ba396a10ac444daba5688a04b87141',
+         dynamic_template_data: {emailAddr: form.emailAddr}
       }
 
       const sendMail = await sgmail.send(msg);

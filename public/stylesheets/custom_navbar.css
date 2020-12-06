@@ -43,6 +43,7 @@ header {
     margin: 0 auto;
     display: block;
     width: 35%;
+    margin-top: 1rem;
 }
 
 .nav-collapse button:hover {

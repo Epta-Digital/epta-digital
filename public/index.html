@@ -96,7 +96,7 @@
                         and branding that help thin out competition, and put your business at the forefront.
                     </p>
                   </div>
-                  <div class="card-footer" role="button">Get Started</div>
+                  <div class="card-footer" role="button" data-value="design">Get Started</div>
                 </div>
               </div>
               <div class="col mb-4">
@@ -107,7 +107,7 @@
                         web interfaces. Our apps and websites are designed to think for the users.
                     </p>
                   </div>
-                  <div class="card-footer" role="button">Get Started</div>
+                  <div class="card-footer" role="button" data-value="ui-ux">Get Started</div>
                 </div>
               </div>
               <div class="col mb-4">
@@ -118,7 +118,7 @@
                           conceptualization to deployment, we take you along the journey with us.
                       </p>
                     </div>
-                    <div class="card-footer" role="button">Get Started</div>
+                    <div class="card-footer" role="button" data-value="webDev">Get Started</div>
                   </div>
               </div>
               <div class="col mb-4">
@@ -128,7 +128,7 @@
                       <p class="card-text">Connecting with your target audience and drawing them closer to your brand with engaging contents. Increasing your business profitability by using tested & trusted ad copies that convince your target audience that your brand offers the value they need.
                       </p>
                     </div>
-                    <div class="card-footer" role="button">Get Started</div>
+                    <div class="card-footer" role="button" data-value="contentWriting">Get Started</div>
                   </div>
               </div>
               <div class="col mb-4">
@@ -139,7 +139,7 @@
                           would deliver the best of high quality services. You do your thing, we capture the magic.
                       </p>
                     </div>
-                    <div class="card-footer" role="button">Get Started</div>
+                    <div class="card-footer" role="button" data-value="photography">Get Started</div>
                   </div>
               </div>
               <div class="col mb-4">
@@ -150,7 +150,7 @@
                           that are flexible, makes it possible to test for results, and adapt swiftly.
                       </p>
                     </div>
-                    <div class="card-footer" role="button">Get Started</div>
+                    <div class="card-footer" role="button" data-value="brandStrategy">Get Started</div>
                   </div>
               </div>
               <div class="col mb-4">
@@ -161,7 +161,7 @@
                           explained animations, promotional videos and white board animations.
                       </p>
                     </div>
-                    <div class="card-footer" role="button">Get Started</div>
+                    <div class="card-footer" role="button" data-value="animations">Get Started</div>
                   </div>
               </div>
               <div class="col-lg-8 mb-4">
@@ -271,7 +271,7 @@
           </div>
   
           <div class="col-md-4">
-            <img src="images/epta_logo_light.png" alt="epta digital logo">
+            <a href="#"><img src="images/epta_logo_light.png" alt="epta digital logo"></a>
             <ul class="social-media">
               <li><a href="https://m.facebook.com/EPTAdigital" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li>
               <li><a href="https://instagram.com/theeptadigital" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
@@ -406,8 +406,13 @@
     }
 
     $("#services").on("click", ".card-footer", function() {
-      window.location.href = "ideabrief.html";
-      });
+      const service = $(this).attr("data-value");
+      window.location.href = "ideabrief.html?service=" + service;
+    });
+
+    $("#brandpkg .col").on("click", ".card-footer", function() {
+      window.location.href = "ideabrief.html?service=" + this.firstChild.id;
+    });
     
     function parseUrl() {
       const url = document.URL;
