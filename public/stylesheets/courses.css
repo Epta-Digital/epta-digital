@@ -40,6 +40,10 @@
     margin-bottom: 4rem;
 }
 
+ul li::marker {
+    color: var(--brand-color-secondary);
+}
+
 @media all and (max-width: 600px) {
     .web-development {
         flex-direction: column;
