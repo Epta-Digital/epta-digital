@@ -50,6 +50,7 @@ main {
     background-color: var(--brand-color-secondary);
     color: var(--text-color);
     transform: scale(1.05, 1.05);
+    cursor: pointer;
 }
 
 .related-posts h1 {
