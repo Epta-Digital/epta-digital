@@ -112,11 +112,11 @@ app.post('/form', upload.single('attachFile'), async(req, res) => {
 })
 
 //Not found - 404 errorsS
-app.use((req, res, next) => {
-   const error = new Error('Not found!')
-   error.status = 404
-   next(error)
-})
+// app.use((req, res, next) => {
+//    const error = new Error('Not found!')
+//    error.status = 404
+//    next(error)
+// })
 
 //Error handler
 app.use((error, req, res, next) => {
@@ -127,6 +127,10 @@ app.use((error, req, res, next) => {
        }
    })
 })
+
+app.get('/.well-known/pki-validation/.[.]txt', function(req, res) {
+   res.sendFile('public/.well-known/pki-validation/408E2128B123FF8F22C2714098216BB5.txt', {root:__dirname});
+});
 
 //Set up port listener
 const PORT = process.env.PORT || 5000;
