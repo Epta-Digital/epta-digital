@@ -1,8 +1,11 @@
+const path = require('path');
+const fs = require('fs');
+
 const express = require('express');
 const mongoose = require('mongoose');
-const path = require('path');
 const sgmail = require('@sendgrid/mail');
 const multer  = require('multer');
+
 require('dotenv').config();
 
 const app = express();
@@ -10,8 +13,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+const companyEmail = "eptadigitalinfo@gmail.com";
 sgmail.setApiKey(process.env.SGMAIL_API_KEY);
 sgmail.setSubstitutionWrappers('{{', '}}');
+
+fs.access("./uploads", (err) => {
+   if (err)
+      fs.mkdir("./uploads", (err) => {
+         if (err) throw err;
+      });
+});
 
 //Mongo setup
 const db_url = process.env.MONGO_URI;
@@ -27,8 +38,7 @@ db.on('error', err => {
 
 //model
 const Schema = mongoose.Schema;
-
-const formSchema = new Schema({
+const ideaBrieFormSchema = new Schema({
    companyName: {
       type: String,
       required: [ true, 'Company field is required']
@@ -62,7 +72,7 @@ const formSchema = new Schema({
    }
 })
 
-const Form = mongoose.model('form', formSchema);
+const ideaBrieForm = mongoose.model('IdeaBrief', ideaBrieFormSchema);
 
 //Multer storage
 const storage = multer.diskStorage({
@@ -76,7 +86,7 @@ const storage = multer.diskStorage({
       )
     }
  })
-  
+
 const upload = multer({ storage })
 
 //Form handler
@@ -85,18 +95,27 @@ app.post('/form', upload.single('attachFile'), async(req, res) => {
       const form = req.body;
       const attachment = req.file ? req.file.path : "";
       form.attachFile = attachment;
-      const newForm = new Form(form);
+      const newForm = new ideaBrieForm(form);
       console.log(form);
       if(!newForm) {
          res.status(400);
          return res.send('Error')
       }
-      const msg = {
-         to: form.emailAddr,
-         from: 'eptadigitalinfo@gmail.com',
-         templateId: 'd-a0ba396a10ac444daba5688a04b87141',
-         dynamic_template_data: {emailAddr: form.emailAddr}
-      }
+
+      const msg = [
+         {
+            to: form.emailAddr,
+            from: `Epta Digital Agency <${companyEmail}>`,
+            templateId: 'd-a0ba396a10ac444daba5688a04b87141',
+            dynamic_template_data: {emailAddr: form.emailAddr}
+         },
+         {
+            to: companyEmail,
+            from: companyEmail,
+            templateId: "d-f0481f35c55d487f84d83ae2bc0345bd",
+            dynamic_template_data: {...form}
+         }
+      ];
 
       const sendMail = await sgmail.send(msg);
       if(!sendMail) {
@@ -127,10 +146,6 @@ app.use((error, req, res, next) => {
        }
    })
 })
-
-app.get('/.well-known/pki-validation/.[.]txt', function(req, res) {
-   res.sendFile('public/.well-known/pki-validation/408E2128B123FF8F22C2714098216BB5.txt', {root:__dirname});
-});
 
 //Set up port listener
 const PORT = process.env.PORT || 5000;
