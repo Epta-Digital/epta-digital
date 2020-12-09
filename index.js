@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const express = require('express');
+var enforce = require('express-sslify');
 const mongoose = require('mongoose');
 const sgmail = require('@sendgrid/mail');
 const multer  = require('multer');
@@ -12,6 +13,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Comment out this line in a local environment
+app.use(enforce.HTTPS({trustProtoHeader: true}));
 
 const companyEmail = "eptadigitalinfo@gmail.com";
 sgmail.setApiKey(process.env.SGMAIL_API_KEY);
