@@ -14,7 +14,7 @@ header {
 
 .navbar-brand {
     margin: 1rem;
-    width: 80%;
+    width: 60%;
     margin-right: 0;
     margin-bottom: 0;
 }
@@ -54,10 +54,10 @@ header {
 
 .nav-trigger {
     cursor: pointer;
-    width: 30px;
-    height: 25px;
+    width: 27px;
+    height: 23px;
     position: relative;
-    top: -44.5px;
+    top: -30px;
     align-self: flex-end;
     margin-right: 1rem;
 }
@@ -250,10 +250,14 @@ header {
 
     .navbar-brand {
         margin-bottom: 1rem;
+        width: 80%;
     }
 
     .nav-trigger {
         display: none;
+        top: -44.5px;
+        width: 30px;
+        height: 25px;
     }
 
     .nav-collapse {

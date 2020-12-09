@@ -165,6 +165,7 @@ section h1 {
 .footer-elements div:last-child {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -174,11 +175,13 @@ section h1 {
     display: flex;
     margin: 0 auto;
     margin-top: 1rem;
+    width: 0;
+    justify-content: space-around;
 }
 
 .social-media li {
     padding: 0;
-    margin-right: 10%;
+    margin-right: .8rem;
 }
 
 .social-media li:last-child {
@@ -281,10 +284,6 @@ section h1 {
         padding: 0;
         padding-top: 2rem;
     }
-
-    .footer-elements div {
-        margin-bottom: 1rem;
-    }
 }
 
 /* Small devices (landscape), Tablets */
@@ -321,6 +320,22 @@ section h1 {
     .bg-polygon {
         top: 35%;
         left: 18%;
+    }
+
+    .footer-elements div {
+        margin-bottom: 1rem;
+    }
+
+    .social-media {
+        width: 40%;
+    }
+
+    .social-media li {
+        margin-right: 0;
+    }
+
+    .footer-logo {
+        width: 80%;
     }
 }
 
