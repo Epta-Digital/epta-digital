@@ -6,9 +6,15 @@
     min-height: 100vh;
 }
 
+.submit-div button {
+    margin: 0 auto;
+    display: block;
+    width: 30%;
+}
+
 @media all and (min-width: 768px) {
-    .enroll{
-        margin-top: 6rem;
+    .enroll {
+        margin-top: 4rem;
     }
 }
 

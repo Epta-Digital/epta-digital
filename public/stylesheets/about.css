@@ -6,7 +6,7 @@
     text-align: justify;
 }
 
-.about-content button p {
+.about-content a p {
     margin: 0;
 }
 
@@ -28,12 +28,12 @@
         margin-left: 2.5rem;
     }
 
-    .about-content button p {
+    .about-content a p {
         writing-mode: vertical-rl;
         text-orientation: mixed;
     }
 
-    .about-content button i {
+    .about-content a i {
         transform: rotateZ(90deg);
     }
 }

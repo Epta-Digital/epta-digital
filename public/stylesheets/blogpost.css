@@ -57,9 +57,10 @@ main {
     font-size: 2rem;
 }
 
-.related-posts button {
+.related-posts > a {
     margin: 0 auto;
     display: block;
+    width: 11.5rem;
 }
 
 @media all and (min-width: 922px) {

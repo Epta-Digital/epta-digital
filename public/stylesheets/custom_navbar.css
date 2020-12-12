@@ -52,6 +52,14 @@ header {
     color: #e2e6ea;
 }
 
+.nav-collapse button > a {
+    color: inherit;
+}
+
+.nav-collapse button > a:hover {
+    text-decoration: none;
+}
+
 .nav-trigger {
     cursor: pointer;
     width: 27px;

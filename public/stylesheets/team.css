@@ -35,7 +35,7 @@
     box-shadow: 2px 8px 8px var(--brand-color-secondary-blur);
 }
 
-.team-content button p {
+.team-content a p {
     margin: 0;
 }
 
@@ -71,17 +71,17 @@
         margin-left: 2.5rem;
     }
 
-    /* .team-content button {
+    /* .team-content a {
         position: relative;
         top: -20rem;
     } */
 
-    .team-content button p {
+    .team-content a p {
         writing-mode: vertical-rl;
         text-orientation: mixed;
     }
 
-    .team-content button i {
+    .team-content a i {
         transform: rotateZ(90deg);
     }
 }

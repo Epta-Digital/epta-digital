@@ -82,6 +82,10 @@
     font-size: 1.25rem;
 }
 
+#blog .card-deck a:hover {
+    color: var(--brand-color-secondary);
+}
+
 .blog-btn {
     margin-top: 1.5rem;
     text-align: center;

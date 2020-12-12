@@ -2,20 +2,29 @@ const path = require('path');
 const fs = require('fs');
 
 const express = require('express');
-var enforce = require('express-sslify');
+const sslRedirect = require('heroku-ssl-redirect').default
 const mongoose = require('mongoose');
 const sgmail = require('@sendgrid/mail');
 const multer  = require('multer');
 
+// routes
+const academy = require('./routes/academy');
+const blog = require('./routes/blog');
+const about = require('./routes/about');
+
 require('dotenv').config();
+
+const env = process.env.NODE_ENV || 'development';
+const options = {
+   root: path.join(__dirname, 'public')
+}
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Comment out this line in a local environment
-app.use(enforce.HTTPS({trustProtoHeader: true}));
+app.use(sslRedirect(['production'], 301));
 
 const companyEmail = "eptadigitalinfo@gmail.com";
 sgmail.setApiKey(process.env.SGMAIL_API_KEY);
@@ -94,7 +103,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 //Form handler
-app.post('/form', upload.single('attachFile'), async(req, res) => {
+app.post('/services/getting-started/submit', upload.single('attachFile'), async(req, res) => {
    try {
       const form = req.body;
       const attachment = req.file ? req.file.path : "";
@@ -150,6 +159,32 @@ app.use((error, req, res, next) => {
        }
    })
 })
+
+app.use('(/[\\w-]+)+/stylesheets/:style(\\w+[.]css)', function (req, res) {
+   res.sendFile('./stylesheets/' + req.params['style'], options);
+});
+
+app.use('(/[\\w-]+)+/images(/\\w+){0,}/:img', function (req, res) {
+   const index = req.originalUrl.search("/images/");
+   const imgPath = req.originalUrl.slice(index).slice(7);
+   res.sendFile('./images/' + imgPath, options);
+});
+
+app.use('(/[\\w-]+)+/javascripts(/\\w*){0,}/:js(\\w+[.]min[.]js)', function (req, res) {
+   res.sendFile('./javascripts/min/' + req.params['js'], options);
+});
+
+app.use('/academy', academy);
+app.use('/blog', blog);
+app.use('/about', about);
+
+app.get('/services', function (req, res) {
+   res.redirect(301, '/#services');
+});
+
+app.get('/services/getting-started', function (req, res) {
+   res.sendFile('ideabrief.html', options);
+});
 
 //Set up port listener
 const PORT = process.env.PORT || 5000;

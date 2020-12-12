@@ -61,6 +61,15 @@ section h1 {
     color: var(--brand-color-primary);
 }
 
+.clickable_card {
+    display: block;
+    color: inherit;
+}
+
+.clickable_card:hover {
+    text-decoration: none;
+}
+
 .header-container {
     background-image: url('../images/epta-bg-1.png');
     background-repeat: no-repeat;

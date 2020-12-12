@@ -25,7 +25,7 @@
 <body>
   <header class="fixed-top">
     <nav class="navbar navbar-dark no-fade">
-      <a href="index.html"><img class="navbar-brand" src="images/epta_logo_light.png" alt="epta digital logo"></a>
+      <a href="/"><img class="navbar-brand" src="images/epta_logo_light.png" alt="epta digital logo"></a>
       <div class="nav-trigger">
         <i></i>
         <i></i>
@@ -34,152 +34,140 @@
       <div class="nav-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home
+            <a class="nav-link" href="/">Home
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="index.html#services">Services</a>
+            <a class="nav-link " href="/#services">Services</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="academy.html">Academy</a>
+            <a class="nav-link" href="/academy">Academy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
+            <a class="nav-link" href="/blog">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About us</a>
+            <a class="nav-link" href="/about">About us</a>
           </li> 
         </ul>
-        <button type="button" class="btn btn-light" onclick="location.href = 'ideabrief.html'">Get started</button>
+        <button type="button" class="btn btn-light" onclick="location.href = '/services/getting-started'"><a href='/services/getting-started'>Get started</a></button>
       </div>
     </nav>
   </header>
 
-    <main> 
-      <section class="ideabrief enroll"> 
-        <h1>Register Here!</h1>
-        <form method="POST" action="/form" enctype="multipart/form-data">
-          <fieldset>
-            <div class="form-group">
-              <label for="full-name">Full name</label>
-              <input name="companyName" id="full-name" class="form-control" type="text" placeholder="e.g Tobe Nnaji" required>
-            </div>
-            <div class="form-group">
-              <label for="email-addr">Email address</label>
-              <input name="emailAddr" id="email-addr" class="form-control" type="email" placeholder="e.g t.nnaji@gmail.com" required>
-            </div>
-            <div class="form-group">
-              <label for="mobile">Mobile number</label>
-              <input name="mobileNo" id="mobile" class="form-control" type="tel" placeholder="e.g +2348012345678" required>
-            </div>
-          </fieldset>
-
+  <main> 
+    <section class="enroll"> 
+      <h1>Register Here!</h1>
+      <form method="POST" action="" enctype="multipart/form-data">
+        <fieldset>
           <div class="form-group">
-            <label for="services">Select the course you are registering for</label>
-            <select multiple name="services" id="services" class="form-control" required>
-              <option value="design">Introduction to Graphics design</option>
-              <option value="ui-ux">Introduction to UI/UX design</option>
-              <option value="photography">Introduction to Photography</option>
-              <option value="webDev">Introduction to Web Development</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="address">City of residence</label>
-              <input name="budget" id="address" class="form-control" type="text" placeholder="e.g Benin City">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="dod">State of residence</label>
-              <input name="dateOfDelivery" id="dod" class="form-control" type="text" placeholder="e.g Edo state">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="gender">Gender</label>
-            <select multiple name="gender" id="gender" class="form-control" required>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
+            <label for="full-name">Full name</label>
+            <input name="companyName" id="full-name" class="form-control" type="text" placeholder="e.g Tobe Nnaji" required>
           </div>
           <div class="form-group">
-            <label for="comments">Comment(s)</label>
-            <textarea name="brief" id="comments" class="form-control"></textarea>
+            <label for="email-addr">Email address</label>
+            <input name="emailAddr" id="email-addr" class="form-control" type="email" placeholder="e.g t.nnaji@gmail.com" required>
           </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <!-- <label for="attach-file">Attach file (optional)</label>
-              <input name="attachFile" id="attach-file" class="form-control-file" type="file"> -->
-              <label class="custom-file-label" for="attach-file">Attach file (optional)</label>
-              <input name="attachFile" id="attach-file" class="custom-file-input" type="file">
-            </div>
-            <div class="form-group col-md-6 submit-div">
-              <button type="submit" class="btn btn-danger">Submit </button>
-            </div>
+          <div class="form-group">
+            <label for="mobile">Mobile number</label>
+            <input name="mobileNo" id="mobile" class="form-control" type="tel" placeholder="e.g +2348012345678" required>
           </div>
-      </form>
-      </section>
-    </main>
+        </fieldset>
 
-    <footer class="main-footer">
-  
-      <!-- Footer Links -->
-      <div class="container-fluid text-center text-md-left">
-        <div class="row footer-elements">
-          <div class="col-md-4">
-            <h5 class="text-uppercase font-weight-bold">QUICK LINKS</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="about.html">About us</a>
-              </li>
-              <li>
-                <a href="team.html">The Team</a>
-              </li>
-              <!-- <li>
-                <a href="#">Our Portfolio</a>
-              </li> -->
-              <li>
-                <a href="ideabrief.html">Brief your idea</a>
-              </li>
-            </ul>
-  
+        <div class="form-group">
+          <label for="services">Select the course you are registering for</label>
+          <select multiple name="services" id="services" class="form-control" required>
+            <option value="design">Introduction to Graphics design</option>
+            <option value="ui-ux">Introduction to UI/UX design</option>
+            <option value="photography">Introduction to Photography</option>
+            <option value="webDev">Introduction to Web Development</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="address">City of residence</label>
+            <input name="budget" id="address" class="form-control" type="text" placeholder="e.g Benin City">
           </div>
-  
-          <div class="col-md-4 text-center">
-            <h5 class="text-uppercase font-weight-bold">CONTACT US</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="https://www.latlong.net/c/?lat=6.433700&long=3.465920" target="_blank">19, Ladipo Omotosho-Cole Street,<br> Lekki phase 1, Lagos.</a>
-              </li>
-              <li>
-                <a href="mailto:eptadigitalinfo@gmail.com">eptadigitalinfo@gmail.com</a>
-              </li>
-              <li>
-                Customer care:
-              </li>
-              <li>
-                <a href="tel:+2347081321222">+2347081321222</a>
-              </li>
-            </ul>
-  
-          </div>
-  
-          <div class="col-md-4">
-            <a href="index.html"><img class="footer-logo" src="images/epta_logo_light.png" alt="epta digital logo"></a>
-            <ul class="social-media">
-              <li><a href="https://m.facebook.com/EPTAdigital" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li>
-              <li><a href="https://instagram.com/theeptadigital" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
-              <li><a href="https://twitter.com/EptaDigital" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
-              <li><a href="" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/epta-digital-b58a4b1ba" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
-            </ul>
+          <div class="form-group col-md-6">
+            <label for="dod">State of residence</label>
+            <input name="dateOfDelivery" id="dod" class="form-control" type="text" placeholder="e.g Edo state">
           </div>
         </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select name="gender" id="gender" class="form-control" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="form-group submit-div">
+          <button type="submit" class="btn btn-danger">Submit </button>
+        </div>
+    </form>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+      <div class="row footer-elements">
+        <div class="col-md-4">
+          <h5 class="text-uppercase font-weight-bold">QUICK LINKS</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="/about">About us</a>
+            </li>
+            <li>
+              <a href="/about/team">The Team</a>
+            </li>
+            <!-- <li>
+              <a href="#">Our Portfolio</a>
+            </li> -->
+            <li>
+              <a href="/services/getting-started">Brief your idea</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-4 text-center">
+          <h5 class="text-uppercase font-weight-bold">CONTACT US</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.latlong.net/c/?lat=6.433700&long=3.465920" target="_blank">19, Ladipo Omotosho-Cole Street,<br> Lekki phase 1, Lagos.</a>
+            </li>
+            <li>
+              <a href="mailto:eptadigitalinfo@gmail.com">eptadigitalinfo@gmail.com</a>
+            </li>
+            <li>
+              Customer care:
+            </li>
+            <li>
+              <a href="tel:+2347081321222">+2347081321222</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-4">
+          <a href="/"><img class="footer-logo" src="images/epta_logo_light.png" alt="epta digital logo"></a>
+          <ul class="social-media">
+            <li><a href="https://m.facebook.com/EPTAdigital" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li>
+            <li><a href="https://instagram.com/theeptadigital" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li><a href="https://twitter.com/EptaDigital" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+            <li><a href="https://wa.me/2347081321222" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/epta-digital-b58a4b1ba" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
+          </ul>
+        </div>
       </div>
-  
-      <div class="text-center py-3">&#169; 2020 Copyright:
-        <a href=""> EPTA Digital</a>
-      </div>
-    </footer>
+    </div>
+
+    <div class="text-center py-3">&#169; 2020 Copyright:
+      <a href=""> EPTA Digital</a>
+    </div>
+  </footer>
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
