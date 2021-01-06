@@ -106,8 +106,7 @@ const upload = multer({ storage })
 app.post('/services/getting-started/submit', upload.single('attachFile'), async(req, res) => {
    try {
       const form = req.body;
-      const attachment = req.file ? req.file.path : "";
-      form.attachFile = attachment;
+      form.attachFile = req.file ? req.file.path : "";
       const newForm = new ideaBrieForm(form);
       console.log(form);
       if(!newForm) {
@@ -129,6 +128,23 @@ app.post('/services/getting-started/submit', upload.single('attachFile'), async(
             dynamic_template_data: {...form}
          }
       ];
+
+      let attachment;
+      let data = fs.readFileSync(req.file.path)
+      if (data) {
+         attachment = [
+            {
+               content: data.toString('base64'),
+               type: req.file.mimetype,
+               filename: req.file.originalname
+            }
+         ]
+      }
+
+      if (attachment) {
+         msg[0].attachments = attachment;
+         msg[1].attachments = attachment;
+      }
 
       const sendMail = await sgmail.send(msg);
       if(!sendMail) {
