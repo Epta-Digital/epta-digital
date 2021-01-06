@@ -141,10 +141,8 @@ app.post('/services/getting-started/submit', upload.single('attachFile'), async(
          ]
       }
 
-      if (attachment) {
-         msg[0].attachments = attachment;
+      if (attachment)
          msg[1].attachments = attachment;
-      }
 
       const sendMail = await sgmail.send(msg);
       if(!sendMail) {
