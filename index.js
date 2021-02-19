@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(sslRedirect(['production'], 301));
+// app.use(sslRedirect(['production'], 301));
 
 const companyEmail = "eptadigitalinfo@gmail.com";
 sgmail.setApiKey(process.env.SGMAIL_API_KEY);
